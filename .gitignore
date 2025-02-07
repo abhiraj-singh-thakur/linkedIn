@@ -1,0 +1,187 @@
+# api-gateway specific exclusions
+api-gateway/target/
+api-gateway/!.mvn/wrapper/maven-wrapper.jar
+api-gateway/!**/src/main/**/target/
+api-gateway/!**/src/test/**/target/
+
+# STS (Spring Tool Suite)
+api-gateway/.apt_generated
+api-gateway/.classpath
+api-gateway/.factorypath
+api-gateway/.project
+api-gateway/.settings
+api-gateway/.springBeans
+api-gateway/.sts4-cache
+
+# IntelliJ IDEA
+api-gateway/.idea
+api-gateway/*.iws
+api-gateway/*.iml
+api-gateway/*.ipr
+
+# NetBeans
+api-gateway//nbproject/private/
+api-gateway//nbbuild/
+api-gateway//dist/
+api-gateway//nbdist/
+api-gateway//.nb-gradle/
+api-gateway/build/
+api-gateway/!**/src/main/**/build/
+api-gateway/!**/src/test/**/build/
+
+# VS Code
+api-gateway/.vscode/
+
+
+# config-server specific exclusions
+config-server/target/
+config-server/!.mvn/wrapper/maven-wrapper.jar
+config-server/!**/src/main/**/target/
+config-server/!**/src/test/**/target/
+
+# STS (Spring Tool Suite)
+config-server/.apt_generated
+config-server/.classpath
+config-server/.factorypath
+config-server/.project
+config-server/.settings
+config-server/.springBeans
+config-server/.sts4-cache
+
+# IntelliJ IDEA
+config-server/.idea
+config-server/*.iws
+config-server/*.iml
+config-server/*.ipr
+
+# NetBeans
+config-server//nbproject/private/
+config-server//nbbuild/
+config-server//dist/
+config-server//nbdist/
+config-server//.nb-gradle/
+config-server/build/
+config-server/!**/src/main/**/build/
+config-server/!**/src/test/**/build/
+
+# VS Code
+config-server/.vscode/
+
+docker-elk/
+k8s/
+kafka/
+linkedIn_config_server/
+logs/
+neo4j/
+
+
+# notification-service specific exclusions
+notification-service/target/
+notification-service/!.mvn/wrapper/maven-wrapper.jar
+notification-service/!**/src/main/**/target/
+notification-service/!**/src/test/**/target/
+
+# STS (Spring Tool Suite)
+notification-service/.apt_generated
+notification-service/.classpath
+notification-service/.factorypath
+notification-service/.project
+notification-service/.settings
+notification-service/.springBeans
+notification-service/.sts4-cache
+
+# IntelliJ IDEA
+notification-service/.idea
+notification-service/*.iws
+notification-service/*.iml
+notification-service/*.ipr
+
+# NetBeans
+notification-service//nbproject/private/
+notification-service//nbbuild/
+notification-service//dist/
+notification-service//nbdist/
+notification-service//.nb-gradle/
+notification-service/build/
+notification-service/!**/src/main/**/build/
+notification-service/!**/src/test/**/build/
+
+# VS Code
+notification-service/.vscode/
+
+# post-service specific exclusions
+post-service/target/
+post-service/!.mvn/wrapper/maven-wrapper.jar
+post-service/!**/src/main/**/target/
+post-service/!**/src/test/**/target/
+
+# STS (Spring Tool Suite)
+post-service/.apt_generated
+post-service/.classpath
+post-service/.factorypath
+post-service/.project
+post-service/.settings
+post-service/.springBeans
+post-service/.sts4-cache
+
+# IntelliJ IDEA
+post-service/.idea
+post-service/*.iws
+post-service/*.iml
+post-service/*.ipr
+
+# NetBeans
+post-service//nbproject/private/
+post-service//nbbuild/
+post-service//dist/
+post-service//nbdist/
+post-service//.nb-gradle/
+post-service/build/
+post-service/!**/src/main/**/build/
+post-service/!**/src/test/**/build/
+
+# VS Code
+post-service/.vscode/
+
+
+
+# user-service specific exclusions
+user-service/target/
+user-service/!.mvn/wrapper/maven-wrapper.jar
+user-service/!**/src/main/**/target/
+user-service/!**/src/test/**/target/
+
+# STS (Spring Tool Suite)
+user-service/.apt_generated
+user-service/.classpath
+user-service/.factorypath
+user-service/.project
+user-service/.settings
+user-service/.springBeans
+user-service/.sts4-cache
+
+# IntelliJ IDEA
+user-service/.idea
+user-service/*.iws
+user-service/*.iml
+user-service/*.ipr
+
+# NetBeans
+user-service//nbproject/private/
+user-service//nbbuild/
+user-service//dist/
+user-service//nbdist/
+user-service//.nb-gradle/
+user-service/build/
+user-service/!**/src/main/**/build/
+user-service/!**/src/test/**/build/
+
+# VS Code
+user-service/.vscode/
+
+
+linkedin_config_server/
+
+
+data/
+.idea/
