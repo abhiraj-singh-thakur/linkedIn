@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="HttpClientEndpointsTabState">
-    <option name="requestToText" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;1e3ff1c0ffdc2b21173f264e02dc4de6db9b6a24&quot; value=&quot;###&amp;#10;GET http://localhost:9033/connections/core/first-connections&amp;#10;Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3IiwiZW1haWwiOiJhbGljZUBnbWFpbC5jb20iLCJpYXQiOjE3MzMwNTUxMTcsImV4cCI6MTczMzI3MTExN30.2jtGVZBQANGSAbOuhcL4U4ORjKtgchIirNxdpMBuy0Ef_tQEVDIM5WAw_AZuuB9b&amp;#10;&quot; /&gt;&#10;  &lt;entry key=&quot;c74e7164e0b725c00f875887b38f8503db13fd61&quot; value=&quot;###&amp;#10;GET http://localhost:8080/posts/core/first-connections&quot; /&gt;&#10;  &lt;entry key=&quot;66948195572c9f45b399a4156c67f184d904f90f&quot; value=&quot;###&amp;#10;GET http://localhost:9030/posts/core/5&amp;#10;Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3IiwiZW1haWwiOiJhbGljZUBnbWFpbC5jb20iLCJpYXQiOjE3MzMwNTUxMTcsImV4cCI6MTczMzI3MTExN30.2jtGVZBQANGSAbOuhcL4U4ORjKtgchIirNxdpMBuy0Ef_tQEVDIM5WAw_AZuuB9b&amp;#10;&amp;#10;&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
-  </component>
-</project>
