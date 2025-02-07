@@ -180,7 +180,13 @@ user-service/!**/src/test/**/build/
 user-service/.vscode/
 
 
-linkedin_config_server/
+linkedin_config_server/api-gateway.yml
+linkedin_config_server/application.yml
+linkedin_config_server/application-k8s.yml
+linkedin_config_server/connection-service.yml
+linkedin_config_server/notification-service.yml
+linkedin_config_server/post-service.yml
+linkedin_config_server/user-service.yml
 
 
 data/
