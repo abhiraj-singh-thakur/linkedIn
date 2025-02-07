@@ -67,8 +67,7 @@ config-server/!**/src/test/**/build/
 # VS Code
 config-server/.vscode/
 
-docker-elk/
-k8s/
+
 kafka/
 linkedIn_config_server/
 logs/
