@@ -1,0 +1,71 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# connection-service specific exclusions
+connection-service/target/
+connection-service/!.mvn/wrapper/maven-wrapper.jar
+connection-service/!**/src/main/**/target/
+connection-service/!**/src/test/**/target/
+
+# STS (Spring Tool Suite)
+connection-service/.apt_generated
+connection-service/.classpath
+connection-service/.factorypath
+connection-service/.project
+connection-service/.settings
+connection-service/.springBeans
+connection-service/.sts4-cache
+
+# IntelliJ IDEA
+connection-service/.idea
+connection-service/*.iws
+connection-service/*.iml
+connection-service/*.ipr
+
+# NetBeans
+connection-service//nbproject/private/
+connection-service//nbbuild/
+connection-service//dist/
+connection-service//nbdist/
+connection-service//.nb-gradle/
+connection-service/build/
+connection-service/!**/src/main/**/build/
+connection-service/!**/src/test/**/build/
+
+# VS Code
+connection-service/.vscode/
+
+data/
+
+

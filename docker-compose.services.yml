@@ -1,0 +1,142 @@
+# services.yml
+version: '3.7'
+
+services:
+  user-service:
+    image: abhiraj858/linkedin-app-user-service:v1
+    container_name: user-service
+    ports:
+      - "9000:9000"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    depends_on:
+      zipkin:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  post-service:
+    image: abhiraj858/linkedin-app-post-service:v1
+    container_name: post-service
+    ports:
+      - "9030:9030"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    depends_on:
+      zipkin:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  connection-service:
+    image: abhiraj858/linkedin-app-connection-service:v1
+    container_name: connection-service
+    ports:
+      - "9033:9033"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    depends_on:
+      zipkin:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  notification-service:
+    image: abhiraj858/linkedin-app-notification-service:v1
+    container_name: notification-service
+    ports:
+      - "9040:9040"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  api-gateway:
+    image: abhiraj858/linkedin-app-api-gateway:v1
+    container_name: api-gateway
+    ports:
+      - "8090:8090"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    depends_on:
+      zipkin:
+        condition: service_healthy
+      user-service:
+        condition: service_healthy
+      post-service:
+        condition: service_healthy
+      connection-service:
+        condition: service_healthy
+      notification-service:
+        condition: service_healthy
+
+    networks:
+      - app-network
+
+  kafka:
+    image: apache/kafka:latest
+    hostname: kafka1
+    container_name: kafka1
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,INTERNAL://:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092,INTERNAL://kafka1:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,INTERNAL:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka1:9093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_NUM_PARTITIONS: 3
+    volumes:
+      - ./kafka/kafka1-data:/tmp/kraft-combined-logs
+    networks:
+      - app-network
+    healthcheck:
+      test: [ "CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka1:29092 --list" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  kafbat:
+    container_name: kafbat-ui
+    image: ghcr.io/kafbat/kafka-ui:latest
+    environment:
+      DYNAMIC_CONFIG_ENABLED: 'true'
+      KAFKA_CLUSTERS_0_NAME: "local"
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka1:29092"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./kafka/config/dynamic_config.yaml:/etc/kafkaui/dynamic_config.yaml
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - app-network
+    healthcheck:
+      test: [ "CMD", "wget", "-q", "--tries=1", "--spider", "http://localhost:9411/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      enabled: true
+    compatibility-verifier:
+      enabled: false
+
+  config:
+    import: "configserver:http://configserver:8888"
+
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+    enabled: true

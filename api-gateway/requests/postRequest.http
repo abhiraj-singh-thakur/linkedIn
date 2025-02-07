@@ -1,0 +1,43 @@
+### Post Related Requests ###
+
+# Shyam Create Post
+POST http://localhost:8090/api/v1/posts/core
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0IiwiZW1haWwiOiJzaHlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzQzNDczNzYsImV4cCI6MTczNDU2MzM3Nn0.EBTIcTMEdZHWSN0Khby1gGwWa7K59GXH09BE6z4o2sCGantOhVAqupm_tqJDpMRK
+Content-Type: application/json
+
+{
+  "content": "It is 7:22 PM, Wednesday"
+}
+
+//Sundar Create Post
+
+###
+POST http://localhost:8090/api/v1/posts/core
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3IiwiZW1haWwiOiJzdW5kYXJAZ21haWwuY29tIiwiaWF0IjoxNzM1NzQxNjc1LCJleHAiOjE3MzU5NTc2NzV9.buKAU3Bm0WOjYbmzz1WJPowZK53ULfBlYf1gloJ9hPgpmouwHrUG51Jvf-r1FZ4x
+Content-Type: application/json
+
+{
+  "content": "It is Thursday"
+}
+
+###
+GET http://localhost:8090/api/v1/posts/core/users/5/allPosts
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0IiwiZW1haWwiOiJzaHlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzQ1Mjk4MTYsImV4cCI6MTczNDc0NTgxNn0.Ja85cW03_FmVBNwdjAUYqewaw_-a3hvN9ndmgN3dRt0kmMS2i2ZhrGrTS1uyiwon
+
+#Get Single Post
+###
+GET http://localhost:8090/api/v1/posts/core/5
+Authorization: Bearer <token>
+
+
+#Shyam like the Sundar Post
+
+###
+POST http://localhost:8090/api/v1/posts/likes/19
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0IiwiZW1haWwiOiJzaHlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzQ2ODMyMDUsImV4cCI6MTczNDg5OTIwNX0.ujBioZ0MMNbtsQONRf8ran_2JyrYZb3hUcd7T34m6Y5EQuxG5AIQ9b4P3EUNyeb4
+
+
+#Shyam unlike the Sundar Post
+###
+DELETE http://localhost:8090/api/v1/posts/likes/19
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0IiwiZW1haWwiOiJzaHlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzQ2ODMyMDUsImV4cCI6MTczNDg5OTIwNX0.ujBioZ0MMNbtsQONRf8ran_2JyrYZb3hUcd7T34m6Y5EQuxG5AIQ9b4P3EUNyeb4

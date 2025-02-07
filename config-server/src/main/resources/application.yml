@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Impossibles800/linkedIn_config_server
+          username: Impossibles800
+          password: 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
+          default-label: main
+
+server:
+  port: 8888
+
+
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,11 @@
+### Profile Related Requests ###
+
+# Sundar getting his profile
+GET http://localhost:8090/api/v1/user/core/profile
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1IiwiZW1haWwiOiJzdW5kYXJAZ21haWwuY29tIiwiaWF0IjoxNzM0NzY3OTI2LCJleHAiOjE3MzQ5ODM5MjZ9.y2iUNCa76VzOqapX9Jpe5csOLK7zrVrwAx1mx6NqYCdZmUDrNJlJpiXK5w3uuU4u
+
+
+# Get Other User's Profile
+###
+GET http://localhost:8090/api/v1/user/core/profile/15
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1IiwiZW1haWwiOiJzdW5kYXJAZ21haWwuY29tIiwiaWF0IjoxNzM0Njc2ODQ4LCJleHAiOjE3MzQ4OTI4NDh9.58mvG8d9ahXCCi3F0AqLEzR2zUnVptqrSd-X7r-Y-J1r-2-c93sMfjEVRqVZ0t8n

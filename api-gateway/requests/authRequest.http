@@ -1,0 +1,47 @@
+### Authentication Requests ###
+
+# User Signup Requests
+###
+POST http://localhost:8090/api/v1/user/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Sundar",
+  "email": "sundar@gmail.com",
+  "password": "1234567890"
+}
+
+// Creating the user
+
+###
+POST http://localhost:8090/api/v1/user/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Shyam",
+  "email": "shyam@gmail.com",
+  "password": "1234567890"
+}
+
+
+//Shyam Login Requests
+
+###
+GET http://localhost:8090/api/v1/user/auth/login
+Content-Type: application/json
+
+{
+  "email": "shyam@gmail.com",
+  "password": "1234567890"
+}
+
+//Sundar Login Requests
+
+###
+GET http://localhost:8090/api/v1/user/auth/login
+Content-Type: application/json
+
+{
+  "email": "sundar@gmail.com",
+  "password": "1234567890"
+}

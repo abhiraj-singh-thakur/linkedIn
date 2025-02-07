@@ -1,0 +1,29 @@
+### Connection Related Requests ###
+
+# Shyam Get First Degree Connections
+###
+GET http://localhost:8090/api/v1/connections/core/first-connections
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0IiwiZW1haWwiOiJzaHlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzQzNDczNzYsImV4cCI6MTczNDU2MzM3Nn0.EBTIcTMEdZHWSN0Khby1gGwWa7K59GXH09BE6z4o2sCGantOhVAqupm_tqJDpMRK
+
+# Sundar Get First Degree Connections
+###
+GET http://localhost:8090/api/v1/connections/core/first-connections
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1IiwiZW1haWwiOiJzdW5kYXJAZ21haWwuY29tIiwiaWF0IjoxNzM0Njc2ODQ4LCJleHAiOjE3MzQ4OTI4NDh9.58mvG8d9ahXCCi3F0AqLEzR2zUnVptqrSd-X7r-Y-J1r-2-c93sMfjEVRqVZ0t8n
+
+
+# Shyam Connection Request
+###
+POST http://localhost:8090/api/v1/connections/core/request/7
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJzaHlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzU3OTgxMDcsImV4cCI6MTczNjAxNDEwN30.w9U8RPA0ZgsGBYJX1yuuC5Q3u17W1ypzs1Ue1Wb65l4SyCjNYQvv6ixC2nAKZlBL
+
+# Accept Connection Request
+###
+POST http://localhost:8090/api/v1/connections/core/accept/8
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3IiwiZW1haWwiOiJzdW5kYXJAZ21haWwuY29tIiwiaWF0IjoxNzM1NzQxNjc1LCJleHAiOjE3MzU5NTc2NzV9.buKAU3Bm0WOjYbmzz1WJPowZK53ULfBlYf1gloJ9hPgpmouwHrUG51Jvf-r1FZ4x
+
+
+# Reject Connection Request
+###
+POST http://localhost:8090/api/v1/connections/core/reject/8
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3IiwiZW1haWwiOiJzdW5kYXJAZ21haWwuY29tIiwiaWF0IjoxNzM1Nzk3NzI1LCJleHAiOjE3MzYwMTM3MjV9.ozWSf1fFJv3MWM3KUtqiyOmtp9l5keBAgNGX-RVLRqkIOQcm5fkFYopU1lin0tOL
+

@@ -1,0 +1,14 @@
+
+### Notification Related Requests ###
+
+# Get Sundar Notifications
+GET http://localhost:8090/api/v1/notifications/core/getNotification
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3IiwiZW1haWwiOiJzdW5kYXJAZ21haWwuY29tIiwiaWF0IjoxNzM1NzQxNjc1LCJleHAiOjE3MzU5NTc2NzV9.buKAU3Bm0WOjYbmzz1WJPowZK53ULfBlYf1gloJ9hPgpmouwHrUG51Jvf-r1FZ4x
+
+
+#Get Shyam Notifications
+###
+GET http://localhost:8090/api/v1/notifications/core/getNotification
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJzaHlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MzU3OTgxMDcsImV4cCI6MTczNjAxNDEwN30.w9U8RPA0ZgsGBYJX1yuuC5Q3u17W1ypzs1Ue1Wb65l4SyCjNYQvv6ixC2nAKZlBL
+
+
