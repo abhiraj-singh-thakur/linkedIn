@@ -1,6 +1,6 @@
-# LinkedIn Clone
+# 
 
-A scalable, microservices-based implementation of a professional networking platform inspired by LinkedIn. This project
+CareerConnect is a scalable, microservices-based implementation of a professional networking platform inspired by LinkedIn. This project
 demonstrates modern distributed systems architecture and cloud-native development practices.
 
 ## Features
